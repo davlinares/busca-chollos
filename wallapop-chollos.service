@@ -1,0 +1,13 @@
+[Unit]
+Description=Wallapop Chollos
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/wallapop-chollos
+ExecStart=/usr/bin/python3 /opt/wallapop-chollos/app.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
